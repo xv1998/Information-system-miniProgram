@@ -1,4 +1,7 @@
 // src/pages/login/login.js
+import { request, showError } from '../../lib/index'
+import { api } from '../../config/api'
+
 Page({
     account: '',
     password: '',
@@ -24,7 +27,32 @@ Page({
      * 登录
      */
     bindLogin: function(){
-
+        let that = this
+        if (!(this.account && this.password)){
+            wx.showToast({
+                title: '请输入账号或密码',
+                icon: 'none'
+            })
+        } else{
+            return request({
+                url: api.login,
+                method: 'POST',
+                needLogin: false,
+                data: {
+                    account: that.account,
+                    password: that.password
+                }
+            }).then((res) =>{
+                if (res.data.code === '0') {
+                    wx.showToast({
+                        title: '登录成功',
+                        icon: 'success'
+                    })
+                }else {
+                    showError('账号或密码错误')
+                }
+            })
+        }
     },
     /**
      * 生命周期函数--监听页面加载

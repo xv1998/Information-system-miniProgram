@@ -1,6 +1,6 @@
 const syllabus = 'https://syllabus.candycute.cn'
 const api = {
-    getLesson: syllabus + '/user/login',  // 登录
+    login: syllabus + '/oauth/login',  // 登录
 }
 
 const errCode = {

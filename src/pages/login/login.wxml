@@ -1,7 +1,7 @@
 <view class="loginBox">
-    <input class="box" placeholder-class="text" bintap="getAccount" placeholder="账号"/>
-    <input class="box" password="true" placeholder-class="text" bintap="getPassword" placeholder="密码"/>
-    <button class="button" bintap="bindLogin">SING IN</button>
+    <input class="box" placeholder-class="text" bindinput="getAccount" placeholder="账号"/>
+    <input class="box" password="true" placeholder-class="text" bindinput="getPassword" placeholder="密码"/>
+    <button class="loginButton" bindtap="bindLogin">sign in</button>
 </view>
 
 
