@@ -1,0 +1,9 @@
+<pnav id="pNav" titleName="登录" isMain="true"></pnav>
+<view class="loginBox">
+    <input class="box" placeholder-class="text" bindinput="getAccount" placeholder="账号"/>
+    <input class="box" password="true" placeholder-class="text" bindinput="getPassword" placeholder="密码"/>
+    <button class="loginButton" bindtap="bindLogin">sign in</button>
+</view>
+
+
+

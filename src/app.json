@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/personal/personal",
+    "pages/index/index",
+    "pages/briefIntro/briefIntro",
+    "pages/basicInfo/basicInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "backgroundColor": "#F1F1F1",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/Message.png",
+        "selectedIconPath": "image/Message.png",
+        "text": "信息"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/oa.png",
+        "selectedIconPath": "image/oa.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "image/personal.png",
+        "selectedIconPath": "image/personal.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

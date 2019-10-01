@@ -1,0 +1,44 @@
+{
+  "id": "1439767",
+  "name": "大创",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "171391",
+      "name": "back",
+      "font_class": "back",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "1450463",
+      "name": "资讯",
+      "font_class": "zixun",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "4303877",
+      "name": "人",
+      "font_class": "ren",
+      "unicode": "e6c5",
+      "unicode_decimal": 59077
+    },
+    {
+      "icon_id": "4889788",
+      "name": "头像",
+      "font_class": "touxiang",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "7275380",
+      "name": "Message",
+      "font_class": "Message",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+.loginBox{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50%;
+
+  .box{
+    height: 76rpx;
+    width: 80%;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 13px;
+    margin-bottom: 24px;
+  }
+  .text{
+    font-family: PingFangSC-Regular;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #939393;
+    letter-spacing: -0.29px;
+  }
+  .loginButton{
+    margin-top: 50rpx;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 80%;
+    background: #B7B7B7;
+    border: 1px solid #979797;
+    border-radius: 13px;
+    text-align: center;
+  }
+}

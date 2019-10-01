@@ -1,0 +1,61 @@
+<!--pages/personal/personal.wxml-->
+<view class="page">
+    <pnav id="pNav" titleName="我的" isMain="false"></pnav>
+    <view class="avatarBox">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            <cover-image class="avatar"  src="../../image/avatar.png"></cover-image>
+        </button>
+        <block wx:else>
+            <image  class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </block>
+        <view class="account">{{id}}</view>
+    </view>
+    <view class="cell" style="border-style: none;"bindtap="tobriefIntro">
+        <view class="weui-cell pd">
+            <view class="weui-cell__bd cellText">个性签名</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+    </view>
+    <view class="cell" style="border-style: none;"bindtap="tobasicInfo">
+        <view class="weui-cell pd">
+            <view class="weui-cell__bd cellText">基本信息</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+    </view>
+    <view class="cell" style="border-style: none;">
+        <view class="weui-cell pd">
+            <view class="weui-cell__bd cellText">我的收藏</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+    </view>
+    <view class="cell" style="border-style: none;">
+        <view class="weui-cell pd">
+            <view class="weui-cell__bd cellText">我发布的</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+    </view>
+    <button wx:if="{{ !isBind }}" class="button" bindtap="toLogin">绑定账号</button>
+    <button wx:if="{{ isBind }}" class="button" bindtap="openLogoutDialog">退出登录</button>
+    <!--    退出登录面板       -->
+    <view class="weui-dialog__bd" wx:if="{{ isLogout }}">
+        <view class="weui-demo-dialog weui-demo-dialog_show">
+            <view class="weui-mask" bindtap="closeLogoutDialog"></view>
+            <view class="weui-half-screen-dialog logoutDialog " catchtap="stopEvent">
+                <view class="weui-half-screen-dialog__hd">
+                    <view class="weui-half-screen-dialog__hd__side">
+                        <view bindtap="closeLogoutDialog" class="weui-icon-btn weui-icon-btn_close"></view>
+                    </view>
+                </view>
+                <view class="weui-half-screen-dialog__bd">
+                    <view class="weui-half-screen-dialog__desc">
+                        确定退出当前账号？
+                    </view>
+                </view>
+                <view class="weui-half-screen-dialog__ft logoutBtn">
+                    <button type="default" bindtap="closeLogoutDialog" class="weui-btn">取消</button>
+                    <button type="default" class="weui-btn btnBg" bindtap="logOut">确定</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="header" id="pNav" style="padding-top:{{ headerT }}px;">
+    <view class="iconfont icon-back" bindtap="navBack" wx:if="{{isMain == 'true'}}">  </view>
+    <view class="box">
+        <view class="headerText">{{titleName}}</view>
+    </view>
+</view>

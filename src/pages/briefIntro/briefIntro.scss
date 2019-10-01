@@ -1,0 +1,12 @@
+.cancel{
+  position: absolute;
+  margin:0 8px;
+  color: #000;
+  background-color: transparent;
+  padding-top:0px;
+  font-size: 18px;
+}
+.cancel::after{
+  content: '';
+  border: none;
+}

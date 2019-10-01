@@ -1,0 +1,96 @@
+$fontStyle: PingFangSC-Regular;
+@import "../../image/icons/icon.scss";
+
+.page{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.avatarBox{
+  position: relative;
+  padding-top: 60rpx;
+  padding-bottom: 90rpx;
+
+  .avatar{
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 200rpx;
+    width: 200rpx;
+    background: #D8D8D8;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  .account{
+    margin-top: 234rpx;
+    font-family: $fontStyle;
+    font-size: 32rpx;
+    color: #030303;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+.cell{
+  position: relative;
+  background-color: #fff;
+  line-height: 1.41176471;
+  font-size: 17px;
+  padding-bottom: 5px;
+
+  .pd{
+    padding: 0 50rpx 35rpx 50rpx;
+  }
+
+  .cellText{
+    font-family: $fontStyle;
+    font-size: 32rpx;
+    color: #000000;
+    letter-spacing: 0;
+  }
+  .year{
+    font-size: 28rpx;
+    padding-right: 48rpx;
+  }
+}
+.button{
+  position: absolute;
+  bottom:0;
+  right:0;
+  left: 0;
+  margin-bottom: 30rpx;
+  border-radius: 4px;
+  line-height: 84rpx;
+  width: 400rpx;
+  height: 84rpx;
+  font-family: $fontStyle;
+  font-size: 32rpx;
+  background: none;
+}
+.logoutDialog{
+  border-radius: 0px;
+  background: #FAFAFA;;
+  font-family: $fontStyle;
+  font-size: 14px;
+  color: #030303;
+  letter-spacing: 0;
+  text-align: center;
+
+  .logoutBtn{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btnBg{
+    background: #E8E8E8;
+  }
+}
+.weui-demo-dialog{
+  visibility:hidden;
+  opacity:0;
+}
+.weui-demo-dialog_show{
+  visibility:visible;
+  opacity:1;
+}
+

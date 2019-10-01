@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAO;EACL,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAC,KAAK;EACZ,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,WAAW;EAC7B,WAAW,EAAC,GAAG;EACf,SAAS,EAAE,IAAI;;AAEjB,cAAc;EACZ,OAAO,EAAE,EAAE;EACX,MAAM,EAAE,IAAI",
+"sources": ["briefIntro.scss"],
+"names": [],
+"file": "briefIntro.wxss"
+}

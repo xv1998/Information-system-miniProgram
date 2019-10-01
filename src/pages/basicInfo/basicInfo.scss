@@ -1,0 +1,70 @@
+$fontStyle: PingFangSC-Regular;
+.main{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.avatarBox{
+  position: relative;
+  padding-top: 60rpx;
+  padding-bottom: 90rpx;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    width: 800px;
+    height: 800px;
+    background: #ddd6f3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  &:before {
+    bottom: 1vh;
+    border-radius: 45%;
+    animation-duration: 10s;
+  }
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, 0) rotateZ(0deg);
+    }
+    50% {
+      transform: translate(-50%, -2%) rotateZ(180deg);
+    }
+    100% {
+      transform: translate(-50%, 0%) rotateZ(360deg);
+    }
+  }
+  .avatar{
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 200rpx;
+    width: 200rpx;
+    border-radius: 100%;
+    border:4px solid #fff;
+    object-fit: cover;
+  }
+  .name{
+    margin-top: 234rpx;
+    font-family: $fontStyle;
+    font-size: 40rpx;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .stuId{
+    font-family: $fontStyle;
+    font-size: 30rpx;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+
