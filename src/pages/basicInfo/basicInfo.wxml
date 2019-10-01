@@ -1,44 +1,60 @@
 <view class="main">
     <pnav id="pNav" titleName="个人信息" isMain="true"></pnav>
-    <view class="avatarBox">
-        <image class="avatar" src="{{info.sex == '女'? '../../image/girl.png':'../../image/boy.png'}}"></image>
-        <view class="name">{{ info.name }}</view>
-        <view class="stuId">{{ info.student_num }}</view>
-    </view>
-    <view class="weui-cells weui-cells_after-title" style="margin-top:10px;">
-        <view class="weui-cell">
-            <view class="weui-cell__bd">入学年份</view>
-            <view class="weui-cell__ft">{{ info.enrollment }}</view>
+    <view wx:if="{{ info.student_num }}">
+        <view class="avatarBox">
+            <image class="avatar" src="{{info.sex == '女'? '../../image/girl.png':'../../image/boy.png'}}"></image>
+            <view class="name">{{ info.name }}</view>
+            <view class="stuId">{{ info.student_num }}</view>
+        </view>
+        <view class="weui-cells weui-cells_after-title" style="margin-top:10px;">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">入学年份</view>
+                <view class="weui-cell__ft">{{ info.enrollment }}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">学年制</view>
+                <view class="weui-cell__ft">{{ info.education_year }}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">教育程度</view>
+                <view class="weui-cell__ft">{{ info.education_level }}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">学院</view>
+                <view class="weui-cell__ft">{{ info.college }}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">宿舍</view>
+                <view class="weui-cell__ft">{{ info.dorm }}{{ info.dorm_num }}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">来自</view>
+                <view class="weui-cell__ft">{{ info.from }}</view>
+            </view>
         </view>
     </view>
-    <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell">
-            <view class="weui-cell__bd">学年制</view>
-            <view class="weui-cell__ft">{{ info.education_year }}</view>
+    <view wx:else>
+        <view class="avatarBox">
+            <image class="avatar" src="../../image/organization.png"></image>
+            <view class="name">{{ info.organization_name }}</view>
         </view>
-    </view>
-    <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell">
-            <view class="weui-cell__bd">教育程度</view>
-            <view class="weui-cell__ft">{{ info.education_level }}</view>
-        </view>
-    </view>
-    <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell">
-            <view class="weui-cell__bd">学院</view>
-            <view class="weui-cell__ft">{{ info.college }}</view>
-        </view>
-    </view>
-    <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell">
-            <view class="weui-cell__bd">宿舍</view>
-            <view class="weui-cell__ft">{{ info.dorm }}{{ info.dorm_num }}</view>
-        </view>
-    </view>
-    <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell">
-            <view class="weui-cell__bd">来自</view>
-            <view class="weui-cell__ft">{{ info.from }}</view>
+        <view class="weui-panel" >
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">介绍</view>
+                    <view class="weui-media-box__desc">{{ info.organization_info}}</view>
+                </view>
+            </view>
         </view>
     </view>
 </view>

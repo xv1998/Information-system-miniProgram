@@ -6,18 +6,8 @@ Page({
      */
     data: {
         info: {
-            name: "许嘉涵",
-            student_num: "2017101080",
-            sex: "女",
-            education_level: "本科",
-            education_year: "4",
-            enrollment: "2017",
-            education_type: "",
-            college: "工学院",
-            dorm: "至诚书院",
-            dorm_num: "J447",
-            state: "已派出",
-            from: "广东省汕头市"
+            organization_name: '汕大课程表',
+            organization_info: '这是一个充满了爱和泪水的组织，这里有好看的小哥哥小姐姐们'
         }
     },
 

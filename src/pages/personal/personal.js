@@ -14,6 +14,7 @@ Page({
         isBind: false,
         isLogout: false,
         isTrue: true,
+        intro: '简介',
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
 
@@ -21,6 +22,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        // 判断是否授权微信
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
@@ -80,9 +82,18 @@ Page({
      * 跳转到简介页面
      */
     tobriefIntro:function() {
-        wx.navigateTo({
-            url: '../briefIntro/briefIntro'
-        })
+        const isLogin = cache.get("loginState")
+        if (isLogin) {
+            wx.navigateTo({
+                url: '../briefIntro/briefIntro'
+            })
+        }else {
+            wx.showToast({
+                title: '请先登录',
+                icon: 'none',
+                duration: 2000
+            })
+        }
     },
     /**
      * 打开退出登录面板
@@ -110,7 +121,8 @@ Page({
         that.setData({
             isLogout: false,
             id: 'null',
-            isBind: false
+            isBind: false,
+            intro: '简介'
         })
     },
     /**
@@ -118,9 +130,11 @@ Page({
      */
     onShow: function () {
         const isLogin = cache.get("loginState")
+        const intro = cache.get("intro")
         if (isLogin) {
             this.setData({
-                isBind: true
+                isBind: true,
+                intro: intro? `${intro.substr(0,5)}...`: '简介'
             })
         }
     },

@@ -13,6 +13,13 @@
       "unicode_decimal": 58900
     },
     {
+      "icon_id": "1240740",
+      "name": "笔",
+      "font_class": "bi",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
       "icon_id": "1450463",
       "name": "资讯",
       "font_class": "zixun",

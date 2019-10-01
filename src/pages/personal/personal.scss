@@ -30,6 +30,17 @@ $fontStyle: PingFangSC-Regular;
     letter-spacing: 0;
     text-align: center;
   }
+  .intro{
+    font-family: $fontStyle;
+    font-size: 32rpx;
+    color: #030303;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .intro:after {
+    content: "\e608";
+    position: absolute;
+  }
 }
 .cell{
   position: relative;
@@ -88,9 +99,9 @@ $fontStyle: PingFangSC-Regular;
 .weui-demo-dialog{
   visibility:hidden;
   opacity:0;
+  transition:opacity .3s;
 }
 .weui-demo-dialog_show{
   visibility:visible;
   opacity:1;
 }
-
