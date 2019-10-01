@@ -134,7 +134,7 @@ Page({
         if (isLogin) {
             this.setData({
                 isBind: true,
-                intro: intro? `${intro.substr(0,5)}...`: '简介'
+                intro: intro? `个性签名：${intro}`: '个性签名'
             })
         }
     },

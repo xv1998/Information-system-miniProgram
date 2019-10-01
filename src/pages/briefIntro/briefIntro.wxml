@@ -3,8 +3,8 @@
 <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell">
         <view class="weui-cell__bd">
-            <textarea class="weui-textarea" value="{{ intro ? intro: '' }}"placeholder="{{ intro ? '': '请输入文本'}}" bindinput="userInput"style="height: 3.3em"maxlength="100" />
-            <view class="weui-textarea-counter">{{length}}/100</view>
+            <textarea class="weui-textarea" value="{{ intro ? intro: '' }}"placeholder="{{ intro ? '': '请输入文本'}}" bindinput="userInput"style="height: 3.3em"maxlength="15" />
+            <view class="weui-textarea-counter">{{length}}/15</view>
         </view>
     </view>
 </view>
