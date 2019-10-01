@@ -14,7 +14,7 @@ Page({
         isBind: false,
         isLogout: false,
         isTrue: true,
-        intro: '简介',
+        intro: '个性签名',
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
 
@@ -122,7 +122,7 @@ Page({
             isLogout: false,
             id: 'null',
             isBind: false,
-            intro: '简介'
+            intro: '个性签名'
         })
     },
     /**
